@@ -4,15 +4,31 @@
   <title>Jabbah-Cal</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link type="text/javascript" href=script.js>
+  <script src="script.js"></script>
 </head>
-<body>
-<script src="script.js"></script>
-  <div class="Header">Welcome to the Jabbah-cal</div>
+<body onload="loadFunc()">
   <div class="layout">
-    <div class="Panel">This is where the settings go</div>
-
-    <div class="Cal">This is where the calendar goes</div>
+  <div class="Header">Welcome to the Jabbah-cal</div>
+    <div class="Panel">
+        <label for="loginText">Enter your access code here, if you've logged in before, or have an access code for your organizer's schedule</label>
+        <br>
+        <textarea id="loginText" rows="2" cols="20"></textarea>
+        <button type="button" onclick="loginSubmit()">Login</button>
+        <br><br>
+        <label for="newOrganizer">Enter a Username to get started as a new Organizer</label>
+        <br>
+        <textarea id="newOrganizer" rows="2" cols="20"></textarea>
+        <button type="button" onclick="openCreateMenu()">Organizer</button>
+        <br><br>
+        <label for="userText">Enter a username and the access code from your organizer to get started as a participant</label>
+        <br>
+        <textarea id="userText" rows="2" cols="20"></textarea>
+        <textarea id="accessCode" rows="2" cols="20"></textarea>
+        <button type="button" onclick="pullParticipantSchedule()">Participant</button>
+    </div>
+    <div class="Cal">
+        <div id="tablePrint"></div>
+    </div>
   </div>
 
 </body>

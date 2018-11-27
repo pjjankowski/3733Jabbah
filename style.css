@@ -1,25 +1,21 @@
 body{
     background-color: purple;
 }
-
-div.Header{
-    background-color: pink;
-    padding: 20px;
-    text-align: left;
-
-}
-
 div.layout{
     height:500px;
     width:100%;
 }
-
+div.Header{
+    width:100%;
+    background-color: pink;
+    padding: 20px;
+    text-align: left;
+}
 div.layout:after{
     content: "";
     display: table;
     clear: both;
 }
-
 div.Panel {
     background-color: red;
     float: left;
@@ -27,11 +23,19 @@ div.Panel {
     padding: 15px;
     height:100%;
 }
-
 div.Cal{
     background-color: blue;
     float: left;
     width: 60%;
     padding: 15px;
     height:100%;
+    overflow-y: scroll;
+}
+td{
+    width: 150px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 12px purple;
 }
