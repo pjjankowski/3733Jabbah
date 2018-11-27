@@ -32,10 +32,10 @@ function bookFunc(){
     window.confirm("Please confirm you want to book");
 }
 
-function loginSubmit(){
+function pullSchedule(){
     console.log("yeehaw");
 }
 
 function openCreateMenu(){}
 
-function pullParticipantSchedule(){}
+function newParticipant(){}
